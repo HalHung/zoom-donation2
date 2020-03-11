@@ -1,0 +1,92 @@
+/* ============
+ * Main Stylesheet
+ * ============
+ *
+ * Used for the global application styling.
+ *
+ * The stylus CSS-preprocessor is used for this boilerplate.
+ * If you don't want to use Stylus, that's fine!
+ * Replace the stylus directory with the CSS preprocessor you want.
+ * Require the stylesheet in the bootstrap.js file & install the webpack loader.
+ *
+ * It's that easy...
+ *
+ * http://stylus-lang.com/
+ */
+.bg
+  position absolute
+  height 100%
+  width 100%
+  background-position center center
+  background-size  cover
+  top 0
+  left 0
+
+.btn
+  &.btn-img
+      padding 0
+      background-color transparent;
+  &.btn-link
+      background-color transparent;
+  &.btn-icon
+      width:2rem
+      height:2rem
+      line-height:1.8rem
+      text-align center
+      padding 0
+      border-radius 100%
+
+.grid-container{
+  display :grid;
+  .grid-item{
+    display block
+
+  }
+}
+
+.section
+  position relative
+  .section-header
+    position relative
+    padding:5rem 0;
+    text-align center
+
+
+.block{
+  .block-header{
+    border-bottom 3px solid #999
+    border-top 3px solid #999
+    width 100%
+    color:#999
+    font-weight bold
+    padding .5rem 0
+
+  }
+  .block-body{
+    padding:2rem 0;
+  }
+}
+
+.form-group
+  label
+    color #717171
+    font-weight bold
+    font-size .9rem
+
+
+.container{
+  &.container-sm{
+    max-width: 720px;
+  }
+  &.container-xs{
+    max-width: 540px;
+  }
+}
+
+.mb-6{
+  margin-bottom:6rem;
+}
+
+.breadcrumb{
+  background-color transparent!important
+}

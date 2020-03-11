@@ -1,0 +1,9 @@
+export const SET_PAYLIST = 'SET_PAYLIST';
+export const RESET_PAYLIST = 'RESET_PAYLIST';
+export const SET_COUPON_PAYLIST = 'SET_COUPON_PAYLIST';
+
+export default {
+  SET_PAYLIST,
+  RESET_PAYLIST,
+  SET_COUPON_PAYLIST
+};

@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: zoom-donation
+  name: zoom-donation
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: zoom-donation
+  template:
+    metadata:
+      labels:
+        app: zoom-donation
+    spec:
+      containers:
+      - image: asia.gcr.io/luciditv-bot/zoom-donation:0.0.1
+        name: zoom-donation
+        resources:
+          limits:
+            memory: 64Mi
+          requests:
+            cpu: 10m
+            memory: 64Mi

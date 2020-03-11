@@ -1,0 +1,44 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: luciditv-happiness-www
+  name: luciditv-happiness-www-service
+  namespace: default
+spec:
+  externalTrafficPolicy: Cluster
+  ports:
+  - nodePort: 31730
+    port: 80
+    protocol: TCP
+    targetPort: 80
+  selector:
+    app: luciditv-happiness-www
+  sessionAffinity: None
+  type: NodePort
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  annotations:
+    ingress.gcp.kubernetes.io/pre-shared-cert: mcrt-2747d863-598c-4577-b46f-f1714790a18e
+    ingress.kubernetes.io/ssl-cert: mcrt-2747d863-598c-4577-b46f-f1714790a18e
+    ingress.kubernetes.io/force-ssl-redirect: "true"
+    kubernetes.io/ingress.allow-http: "false"
+    ingress.kubernetes.io/allow-http: "false"
+    networking.gke.io/managed-certificates: happiness.luciditv.com
+  generation: 1
+  name: happiness-ingress
+  namespace: default
+spec:
+  rules:
+  - host: happiness.luciditv.com
+    http:
+      paths:
+      - backend:
+          serviceName: luciditv-happiness-api-service
+          servicePort: 80
+        path: /api/*
+      - backend:
+          serviceName: luciditv-happiness-www-service
+          servicePort: 80

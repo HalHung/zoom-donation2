@@ -1,0 +1,14 @@
+// @import "base";
+.note {
+  font-size: 0.9rem;
+  color: #888;
+}
+
+.el-radio__input.is-checked .el-radio__inner {
+  border-color: #F37220;
+  background: #F37220;
+}
+
+.el-radio__input.is-checked+.el-radio__label {
+  color: #333;
+}
