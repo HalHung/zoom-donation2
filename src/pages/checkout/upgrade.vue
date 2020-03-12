@@ -194,7 +194,7 @@ export default {
           { required: true, message: '請輸入月分', trigger: 'blur' }
         ],
         'card.cvc': [
-          { required: true, message: '請輸入驗證碼', trigger: 'blur' }
+          { required: true, message: '請輸入卡片背面末3碼', trigger: 'blur' }
         ],
       }
     };
