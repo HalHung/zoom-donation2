@@ -45,15 +45,16 @@ export default {
   overflow: hidden;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 
+
   p{
     font-size: 18px;
   }
-
   .para {
     margin-top: 150px;
+    max-height: 10%;
   }
   img {
-    // max-width: 80%;
+    max-width: 100%;
     width: 300px;
   }
   .content{
@@ -65,7 +66,7 @@ export default {
   }
   @include media-breakpoint-down(sm) {
     .para {
-      margin-top: 200px;
+      margin-top: 100px;
     }
     .bg {
       filter: brightness(0.5);
