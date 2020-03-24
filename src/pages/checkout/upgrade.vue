@@ -52,8 +52,11 @@
 
     <el-radio-group v-model="form.payment">
       <el-radio :label="'credit'">信用卡( Visa, Mastercard, JCB )</el-radio>
-       <el-radio :label="'unionpay'">銀聯卡( 信用卡, 儲蓄卡, 中銀通卡)</el-radio>
+      <el-radio :label="'unionpay'">銀聯卡</el-radio>
     </el-radio-group>
+    <el-form-item prop="card.number" v-if="form.payment=='unionpay'">
+      <p>選用銀聯卡請直接點選下方送出按鈕</p>
+    </el-form-item>
     <!-- <el-alert
         class="mt-1"
         v-if="form.payment=='unionpay'"
