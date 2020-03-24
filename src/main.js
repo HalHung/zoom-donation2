@@ -57,7 +57,7 @@ import './assets/stylus/app.styl';
 
 import App from './App';
 import store from './store';
-import VueTelInput from 'vue-tel-input';
+import VueTelInput from 'luciditv-vue-tel-input';
 // 路由設定
 import '@/permission';
 Vue.use(VueTelInput);

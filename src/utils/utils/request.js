@@ -5,7 +5,7 @@ import { getToken } from '@/utils/auth'
 
 // 创建axios实例
 const service = axios.create({
-  baseURL: 'http://127.0.0.1:8090', // api的base_url
+  baseURL: 'https://api.happiness.luciditv.com', // api的base_url
   timeout: 12000 // 请求超时时间
 })
 
