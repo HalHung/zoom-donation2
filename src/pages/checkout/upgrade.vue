@@ -296,6 +296,7 @@ export default {
     },
     submit () {
      const myself = this;
+     myself.form.email = myself.form.email.trim();
       this.$refs['checkoutForm'].validate((valid) => {
           if (valid) {
             myself.isLoading = true;
