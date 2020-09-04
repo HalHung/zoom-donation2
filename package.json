@@ -44,7 +44,7 @@
     "firebaseui": "^4.0.0",
     "lodash": "^4.17.10",
     "luciditv-vue-tel-input": "^5.0.2",
-    "node-sass": "^4.9.2",
+    "node-sass": "^4.13.1",
     "sass-loader": "^6.0.7",
     "vee-validate": "^2.0.5",
     "vue": "^2.4.2",
