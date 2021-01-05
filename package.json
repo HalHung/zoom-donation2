@@ -36,7 +36,7 @@
   "homepage": "https://github.com/petervmeijgaard/vue-2-boilerplate#readme",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.11.2",
-    "axios": "^0.16.2",
+    "axios": "^0.21.1",
     "bootstrap": "^4.0.0",
     "credit-card-type": "^8.3.0",
     "element-ui": "^2.2.1",
